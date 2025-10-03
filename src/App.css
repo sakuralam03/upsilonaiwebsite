@@ -1,42 +1,83 @@
-#root {
-  max-width: 1280px;
+/* Global layout */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff; /* White background */
+  color: #1a1a1a; /* Deep black text */
+}
+
+/* Container for page content */
+.page-container {
+  max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
+}
+
+/* Navigation bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0f0f0f; /* Rich black */
+  padding: 1rem 2rem;
+  color: #ffffff;
+}
+
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #22c55e; /* Tailwind green-500 */
+}
+
+/* Hero section */
+.hero {
   text-align: center;
+  padding: 4rem 2rem;
+  background-color: #f0fdf4; /* Soft green tint */
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #065f46; /* Deep green */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.hero p {
+  font-size: 1.2rem;
+  color: #1a1a1a;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #0f0f0f;
+  font-size: 0.9rem;
+  color: #9ca3af; /* Tailwind gray-400 */
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .page-container {
+    padding: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .hero h1 {
+    font-size: 2rem;
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
   }
-}
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  .navbar a {
+    margin: 0.5rem 0;
+  }
 }
