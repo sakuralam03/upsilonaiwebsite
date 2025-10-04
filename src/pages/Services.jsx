@@ -1,17 +1,41 @@
 import Navbar from "../components/Navbar";
 import ServiceCard from "../components/ServiceCard";
 import Footer from "../components/Footer";
+import "../styles/ServiceCard.css";
 
 function Services() {
   const services = [
-    { title: "Enterprise Content Management", description: "Organize, store, and retrieve enterprise knowledge efficiently.", icon: "📂" },
-    { title: "Information Management", description: "Streamline data governance and accessibility across teams.", icon: "🗄️" },
-    { title: "Information Security", description: "Protect sensitive research data with robust security frameworks.", icon: "🔒" },
-    { title: "SaaS Development", description: "Design and deploy scalable SaaS platforms tailored to labs.", icon: "☁️" },
-    { title: "Web Design", description: "Craft modern, responsive, and user-friendly interfaces.", icon: "🎨" },
-    { title: "Web Development", description: "Build scalable, high-performance web applications.", icon: "🌐" },
-    { title: "Copywriting", description: "Communicate complex ideas with clarity and impact.", icon: "✍️" },
-    { title: "User Experience Writing", description: "Guide users seamlessly through digital workflows.", icon: "🧭" },
+    {
+      title: "Software & Web Development",
+      description:
+        "Custom software solutions and modern web applications built for scalability, performance, and usability.",
+
+      color: "white",
+    },
+    {
+      title: "Electronics & Embedded Systems",
+      description:
+        "Design and prototyping of electronic circuits, IoT devices, and embedded systems for real-world applications.",
+      
+    },
+    {
+      title: "AI & Machine Learning",
+      description:
+        "Develop intelligent systems using deep learning, natural language processing, and predictive analytics.",
+      
+    },
+    {
+      title: "Data Science / IoT / Cybersecurity",
+      description:
+        "Harness data pipelines, IoT integrations, and robust cybersecurity frameworks to drive insights and protect assets.",
+     
+    },
+    {
+      title: "Mechanical / Civil Prototyping",
+      description:
+        "Rapid prototyping and testing of mechanical or civil engineering concepts, bridging design to real-world implementation.",
+
+    },
   ];
 
   return (
@@ -22,9 +46,10 @@ function Services() {
       <section className="p-10 text-center bg-gray-50">
         <h1 className="text-3xl font-bold mb-4">Our Services</h1>
         <p className="max-w-3xl mx-auto text-lg text-gray-700 mb-6">
-          We build tailored AI pipelines for scientific R&D labs — across medicine, materials, and biotech — 
-          where plug-and-play tools fail. Our systems ingest proprietary datasets and optimize critical workflows 
-          using LLMs, embeddings, symbolic reasoning, and scientific computing.
+          We provide end-to-end technical expertise across software, hardware,
+          and applied sciences. From building scalable applications to
+          prototyping physical systems, our services are designed to empower
+          innovation and accelerate research.
         </p>
 
         <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-600">

@@ -1,8 +1,10 @@
+import "../styles/Footer.css";
+
 function Footer() {
   return (
-    <footer className="bg-gray-100 text-center p-6 mt-10">
+    <footer className="footer">
       <p>© 2025 Upsilon AI. All rights reserved.</p>
-      <div className="mt-2 space-x-4">
+      <div className="footer-links">
         <a href="#">LinkedIn</a>
         <a href="#">Twitter</a>
         <a href="#">Instagram</a>

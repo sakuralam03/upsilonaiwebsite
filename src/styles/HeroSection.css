@@ -1,0 +1,112 @@
+/* Import Math Sans (IBM Plex Sans Math as example) */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Math&display=swap');
+
+.hero-section {
+  position: relative;
+  background: linear-gradient(to right, #80cc49, #383737);
+  color: #ffffff;
+  text-align: center;
+  padding: 5rem 2rem;
+  overflow: hidden;
+  font-family: 'Fira Code', monospace; /* force Fira Code */
+}
+
+/* Overlay */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5); /* semi-opaque black */
+  z-index: 1;
+}
+
+/* Content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 50px;
+}
+
+/* Heading with lime underline */
+.hero-title {
+  font-family: 'Fira Code', monospace;;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.hero-title::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  background: #5db307; /* lime green underline */
+  margin: 0.5rem auto 0;
+  transition: width 0.6s ease;
+}
+
+.hero-title:hover::after {
+  width: 100%;
+}
+
+/* Subtitle */
+.hero-subtitle {
+  font-size:1.5rem ;
+  margin-bottom: 2rem;
+  color: #ffffff;
+}
+
+/* Buttons */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: #ffffff;
+  color: #46e563;
+}
+
+.btn-primary:hover {
+  background: #32cd32;
+  color: #ffffff;
+}
+
+.btn-secondary {
+  background: #ffffff;
+  color: #383737;
+}
+
+.btn-secondary:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+/* Fade-in-up animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 1s ease forwards;
+}

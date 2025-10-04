@@ -1,12 +1,41 @@
 import { Link } from "react-router-dom";
+import "../styles/Navbar.css";
+import { useState } from "react";
+import { HashLink } from 'react-router-hash-link';
+
 
 function Navbar() {
+  const [aboutOpen, setAboutOpen] = useState(false);
+
   return (
-    <nav className="bg-white shadow-md p-4 flex justify-between items-center">
-      <h2 className="text-xl font-bold text-indigo-600">Upsilon AI: AI Workflows for Minds That Can’t Afford to Guess</h2>
-      <div className="space-x-4">
+    <nav className="navbar">
+      <div className="brand">
+        <img src="/upsilonai.jpeg" alt="Upsilon AI Logo" className="logo" />
+        <span className="brand-text">UpsilonAI</span>
+      </div>
+
+      <div className="nav-links">
         <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
+
+        {/* About Dropdown */}
+        <div
+          className="dropdown"
+          onMouseEnter={() => setAboutOpen(true)}
+          onMouseLeave={() => setAboutOpen(false)}
+        >
+          <Link to="/about" className="dropdown-toggle">About</Link>
+          {aboutOpen && (
+            <div className="dropdown-menu">
+
+              <HashLink smooth to="/about#who-we-are">Who We Are</HashLink>
+              <HashLink smooth to="/about#our-team">Our Team</HashLink>
+              <HashLink smooth to="/about#achievements">Achievements</HashLink>
+              <HashLink smooth to="/about#university-collabs">University Collaborations</HashLink>
+
+            </div>
+          )}
+        </div>
+
         <Link to="/services">Services</Link>
         <Link to="/projects">Projects</Link>
         <Link to="/universities">Universities</Link>
@@ -19,4 +48,5 @@ function Navbar() {
     </nav>
   );
 }
+
 export default Navbar;
