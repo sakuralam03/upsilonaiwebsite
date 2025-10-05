@@ -1,37 +1,49 @@
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import "../styles/Navbar.css";
 import { useState } from "react";
-import { HashLink } from 'react-router-hash-link';
-
 
 function Navbar() {
   const [aboutOpen, setAboutOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
 
   return (
     <nav className="navbar">
-      <div className="brand">
-        <img src="/upsilonai.jpeg" alt="Upsilon AI Logo" className="logo" />
-        <span className="brand-text">UpsilonAI</span>
+      <div className="navbar-brand">
+        <img src="/upsilonai.jpeg" alt="Upsilon AI Logo" className="navbar-logo" />
+        <span className="navbar-brand-text">UpsilonAI</span>
       </div>
 
-      <div className="nav-links">
+      <button
+        className="navbar-hamburger"
+        onClick={() => setMobileOpen(!mobileOpen)}
+        aria-label="Toggle navigation"
+      >
+        ☰
+      </button>
+
+      <div className={`navbar-links ${mobileOpen ? "open" : ""}`}>
         <Link to="/">Home</Link>
 
-        {/* About Dropdown */}
         <div
-          className="dropdown"
+          className="navbar-dropdown"
           onMouseEnter={() => setAboutOpen(true)}
           onMouseLeave={() => setAboutOpen(false)}
         >
-          <Link to="/about" className="dropdown-toggle">About</Link>
-          {aboutOpen && (
-            <div className="dropdown-menu">
+          <button
+            className="navbar-dropdown-toggle"
+            onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
+          >
+            About
+          </button>
 
+          {(aboutOpen || mobileDropdownOpen) && (
+            <div className="navbar-dropdown-menu">
               <HashLink smooth to="/about#who-we-are">Who We Are</HashLink>
               <HashLink smooth to="/about#our-team">Our Team</HashLink>
               <HashLink smooth to="/about#achievements">Achievements</HashLink>
               <HashLink smooth to="/about#university-collabs">University Collaborations</HashLink>
-
             </div>
           )}
         </div>

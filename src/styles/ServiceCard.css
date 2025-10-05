@@ -1,18 +1,23 @@
-/* Service Card Container */
+/* Service Card Container — Glassmorphism */
 .service-card {
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  color: #1a1a1a;
+  background: rgba(255, 255, 255, 0.15); /* semi-transparent white */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  color: #ffffff;
   animation: flyIn 0.6s ease-out forwards;
   opacity: 0;
   transform: translateY(20px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Fly-in animation */
 @keyframes flyIn {
   to {
-    opacity: 1;
+    opacity: 1.0;
     transform: translateY(0);
   }
 }
@@ -24,9 +29,6 @@
   margin-bottom: 0.75rem;
 }
 
-
-
-
 /* Icon styling */
 .service-card .icon {
   font-size: 2rem;
@@ -34,19 +36,24 @@
   display: block;
 }
 
-/* Alternate background colors */
-.service-card:nth-child(3n+1) {
-  background-color: #000000;
+/* Optional hover effect */
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(177, 227, 50, 0.692);
+}
+
+/* Remove alternate backgrounds — glass cards are unified */
+.service-card:nth-child(3n+1){
+   background: rgba(255, 255, 255, 0.15);
   color: #ffffff;
+  opacity: 0.5;
 }
-
-.service-card:nth-child(3n+2) {
-  background-color: #ffffff;
-  color:#000000
+.service-card:nth-child(3n+2){
+   background: rgb(255, 255, 255);
+  color: #000000;
+  opacity: 0.5;
 }
-
 .service-card:nth-child(3n+3) {
-  background-color: #bfe860;
-  color:#000000 /* Mint green */
-
+  background: rgba(216, 238, 104, 0.734);
+  color: #000000;
 }

@@ -1,5 +1,4 @@
-/* Footer.css */
-
+/* Footer base */
 .footer {
   background-color: #000000; /* black footer */
   color: #ffffff; /* white text */
@@ -14,10 +13,11 @@
   margin-top: 0.75rem;
   display: flex;
   justify-content: center;
-  gap: 1.5rem; /* spacing between links */
+  gap: 1.5rem;
+  flex-wrap: wrap; /* allows wrapping on mid-sized screens */
 }
 
-/* Links */
+/* Individual links */
 .footer-links a {
   color: #ffffff;
   text-decoration: none;
@@ -27,6 +27,20 @@
 
 /* Hover effect */
 .footer-links a:hover {
-  color: #67f63b; /* light blue */
+  color: #67f63b; /* light green */
   transform: translateY(-2px);
+}
+
+/* Responsive tweaks for small screens */
+@media (max-width: 480px) {
+  .footer {
+    padding: 1rem;
+    font-size: 0.85rem;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+  }
 }
