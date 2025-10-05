@@ -1,6 +1,6 @@
 /* Page base */
 .contact-page {
-  background: linear-gradient(to right, #cfd856ea, #f9f9f9);
+  background: linear-gradient(to right, #cfd856ea, #888888);
   min-height: 100vh;
   padding: 4rem 1.5rem;
   display: flex;

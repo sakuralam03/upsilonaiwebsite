@@ -1,6 +1,6 @@
 /* Footer base */
 .footer {
-  background-color: #000000; /* black footer */
+  background-color:#021221; /* black footer */
   color: #ffffff; /* white text */
   text-align: center;
   padding: 1.5rem;
@@ -27,7 +27,7 @@
 
 /* Hover effect */
 .footer-links a:hover {
-  color: #67f63b; /* light green */
+  color: #93ce14; /* light green */
   transform: translateY(-2px);
 }
 
