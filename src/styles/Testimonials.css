@@ -1,20 +1,20 @@
 .testimonials-page {
   padding: 4rem 2rem;
   text-align: center;
-  background: linear-gradient(to right, #c2ef48, #4a5142);
+  background: linear-gradient(to right, #9cce37,  #353a3e);
   min-height: 100vh;
 }
 
 .testimonials-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #1a1a1a;
+  color: #fffbfb;
   margin-bottom: 1rem;
 }
 
 .testimonials-subtitle {
   font-size: 1.125rem;
-  color: #555;
+  color: #faf5f5;
   margin-bottom: 2.5rem;
   max-width: 600px;
   margin-left: auto;

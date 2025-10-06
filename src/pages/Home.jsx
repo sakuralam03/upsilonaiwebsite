@@ -19,7 +19,6 @@ function Home() {
             className="hero-video"
             src="/Scene 01_2.mp4"
             autoPlay
-            muted
             loop
             playsInline
           />
@@ -39,6 +38,21 @@ function Home() {
             real-world academic projects that foster innovation, leadership,
             and community impact.
           </p>
+        </section>
+
+        {/* Second Video Section */}
+        <section className="video-section">
+          <video
+            className="hero-video"
+            src="/Scene 01_2.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+          />
+          <div className="video-overlay">
+            <h2 className="video-title">Real Projects. Real Impact.</h2>
+          </div>
         </section>
 
         {/* Testimonials or Visuals */}
